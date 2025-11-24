@@ -1,16 +1,23 @@
 @import "reset.css";
 @import "variables.css";
 
+*{
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: var(--mediumFont);
+  color: var(--darkCol);
+  font-size: var(--size-0);
+}
+
 body {
 
     > header{
-        background: var(--gradient-45-light-to-accent-one);
+        background: var(--lightCol);
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        padding-block: 0.5rem;
+        grid-template-columns: var(--grid-small);
 
         img{
             grid-column: 2;
+            padding-block: 0.5rem;
         }
 
         button{
@@ -20,15 +27,19 @@ body {
                 height: auto;
                 place-self: center;
             }
+
+            font-weight: var(--thickFont);
         }
 
         button.btn-category-woman{
             grid-column: 1/7;
             grid-row: 2;
+            background: var(--gradient-315-light-to-accent-two);
         }
         button.btn-category-men{
             grid-column: 7/-1;
             grid-row: 2;
+            background: var(--gradient-225-light-to-accent-one);
         }
         button.btn-user-profile{
             grid-column: -6;
@@ -40,15 +51,30 @@ body {
             grid-column: -3;
         }
 
+        > section{
+            grid-column: 1 / -1;
+            background-color: var(--accentColTwo);
+
+            > p{
+               text-align: center;
+                font-size: var(--size--1); 
+                font-weight: var(--thickFont);
+                margin-block: 0.2rem;
+            }
+        }
+
     }
 
-    
 
     main{
+        display: grid;
+        grid-template-columns: var(--grid-small);
 
     }
 
     footer{
+        display: grid;
+        grid-template-columns: var(--grid-small);
 
     }
 
@@ -57,55 +83,55 @@ body {
 @media (min-width: 600px){
     body {
 
-    > header{
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        padding-block: 0.5rem;
-
-        img{
-            grid-column: 2;
-        }
-
-        button{
+        > header{
+            display: grid;
+            grid-template-columns: var(--grid-small);
 
             img{
-                width: 50%;
-                height: auto;
-                place-self: center;
+                grid-column: 2;
             }
+
+            button{
+
+                img{
+                    width: 50%;
+                    height: auto;
+                    place-self: center;
+                }
+            }
+
+            button.btn-category-woman{
+                grid-column: 1/7;
+                grid-row: 2;
+            }
+            button.btn-category-men{
+                grid-column: 7/-1;
+                grid-row: 2;
+            }
+            button.btn-user-profile{
+                grid-column: -6;
+            }
+            button.btn-user-basket{
+                grid-column: -5;
+            }
+            button.btn-user-language{
+                grid-column: -3;
+            }
+
         }
 
-        button.btn-category-woman{
-            grid-column: 1/7;
-            grid-row: 2;
-        }
-        button.btn-category-men{
-            grid-column: 7/-1;
-            grid-row: 2;
-        }
-        button.btn-user-profile{
-            grid-column: -6;
-        }
-        button.btn-user-basket{
-            grid-column: -5;
-        }
-        button.btn-user-language{
-            grid-column: -3;
+        main{
+            display: grid;
+            grid-template-columns: var(--grid-small);
+
         }
 
+        footer{
+            display: grid;
+            grid-template-columns: var(--grid-small);
+
+        }
     }
-
-    
-
-    main{
-
-    }
-
-    footer{
-
-    }
-
-}
 }
 
 @media (min-width: 1000px){
@@ -113,8 +139,7 @@ body {
 
         > header{
             display: grid;
-            grid-template-columns: repeat(24, 1fr);
-            padding-block: 0.5rem;
+            grid-template-columns: var(--grid-big);
 
             img{
                 grid-column: 3;
@@ -130,11 +155,11 @@ body {
             }
 
             button.btn-category-woman{
-                grid-column: 5/7;
+                grid-column: 5/8;
                 grid-row: 1;
             }
             button.btn-category-men{
-                grid-column: 7/9;
+                grid-column: 8/11;
                 grid-row: 1;
             }
             button.btn-user-profile{
@@ -149,15 +174,16 @@ body {
 
         }
 
-        
-
-        main{
+         main{
+            display: grid;
+            grid-template-columns: var(--grid-big);
 
         }
 
         footer{
+            display: grid;
+            grid-template-columns: var(--grid-big);
 
         }
-
     }
 }

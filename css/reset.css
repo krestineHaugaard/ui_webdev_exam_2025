@@ -10,7 +10,6 @@
 }
 
 html {
-  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-feature-settings: "pnum";
   font-variant-numeric: tabular-nums;
   -webkit-text-size-adjust: none;
@@ -141,7 +140,6 @@ select {
   border-radius: 0;
   color: inherit;
   background: transparent;
-  font-size: max(1em, 16px);
 }
 
 button * {

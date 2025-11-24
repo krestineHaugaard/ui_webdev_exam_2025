@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
 :root[data-theme="winter"]{
     --darkCol: #251E1C;
     --lightCol: #E2DBD3;
@@ -64,4 +66,43 @@
     --gradient-315-accent-three-to-accent-one: linear-gradient(315deg, var(--accentColThree) 0%, var(--accentColOne) 100%);
 }
 
- 
+:root{
+    --frontPage: linear-gradient(200deg, var(--accentColOne) 0%, var(--accentColTwo) 20%, var(--accentColThree) 35%, var(--lightCol) 55%, var(--accentColOne) 80%, var(--accentColTwo) 100%);
+}
+
+:root{
+
+    /* @link https://utopia.fyi/type/calculator?c=360,16,1.333,1240,18,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  --size--2: clamp(0.5628rem, 0.534rem + 0.1279vw, 0.6331rem);
+  --size--1: clamp(0.7502rem, 0.7118rem + 0.1705vw, 0.844rem);
+  --size-0: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
+  --size-1: clamp(1.333rem, 1.2648rem + 0.303vw, 1.4996rem);
+  --size-2: clamp(1.7769rem, 1.686rem + 0.4038vw, 1.999rem);
+  --size-3: clamp(2.3686rem, 2.2475rem + 0.5383vw, 2.6647rem);
+  --size-4: clamp(3.1573rem, 2.9959rem + 0.7176vw, 3.552rem);
+  --size-5: clamp(4.2087rem, 3.9935rem + 0.9565vw, 4.7348rem);
+  --size-6: clamp(5.6102rem, 5.3233rem + 1.2751vw, 6.3115rem);
+  --size-7: clamp(7.4784rem, 7.096rem + 1.6996vw, 8.4132rem);
+  --size-8: clamp(9.9688rem, 9.459rem + 2.2656vw, 11.2149rem);
+
+}
+
+:root{
+
+    --thinFont: 400;
+    --mediumFont: 500;
+    --thickFont: 700;
+    --thickestFont: 800;
+    
+}
+
+:root{
+    --grid-small: repeat(12, 1fr);
+    --grid-big: repeat(24, 1fr);
+}
+
+:root{
+
+    --fontRubikGlitch: "Rubik Glitch", system-ui;
+}
