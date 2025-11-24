@@ -4,9 +4,45 @@
 body {
 
     > header{
+        background: var(--gradient-45-light-to-accent-one);
         display: grid;
-        grid-template-columns: repeat(24, 1fr);
+        grid-template-columns: repeat(12, 1fr);
+        padding-block: 0.5rem;
+
+        img{
+            grid-column: 2;
+        }
+
+        button{
+
+            img{
+                width: 100%;
+                height: auto;
+                place-self: center;
+            }
+        }
+
+        button.btn-category-woman{
+            grid-column: 1/7;
+            grid-row: 2;
+        }
+        button.btn-category-men{
+            grid-column: 7/-1;
+            grid-row: 2;
+        }
+        button.btn-user-profile{
+            grid-column: -6;
+        }
+        button.btn-user-basket{
+            grid-column: -5;
+        }
+        button.btn-user-language{
+            grid-column: -3;
+        }
+
     }
+
+    
 
     main{
 
@@ -18,3 +54,110 @@ body {
 
 }
 
+@media (min-width: 600px){
+    body {
+
+    > header{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        padding-block: 0.5rem;
+
+        img{
+            grid-column: 2;
+        }
+
+        button{
+
+            img{
+                width: 50%;
+                height: auto;
+                place-self: center;
+            }
+        }
+
+        button.btn-category-woman{
+            grid-column: 1/7;
+            grid-row: 2;
+        }
+        button.btn-category-men{
+            grid-column: 7/-1;
+            grid-row: 2;
+        }
+        button.btn-user-profile{
+            grid-column: -6;
+        }
+        button.btn-user-basket{
+            grid-column: -5;
+        }
+        button.btn-user-language{
+            grid-column: -3;
+        }
+
+    }
+
+    
+
+    main{
+
+    }
+
+    footer{
+
+    }
+
+}
+}
+
+@media (min-width: 1000px){
+    body {
+
+        > header{
+            display: grid;
+            grid-template-columns: repeat(24, 1fr);
+            padding-block: 0.5rem;
+
+            img{
+                grid-column: 3;
+            }
+
+            button{
+
+                img{
+                    width: 50%;
+                    height: auto;
+                    place-self: center;
+                }
+            }
+
+            button.btn-category-woman{
+                grid-column: 5/7;
+                grid-row: 1;
+            }
+            button.btn-category-men{
+                grid-column: 7/9;
+                grid-row: 1;
+            }
+            button.btn-user-profile{
+                grid-column: -7;
+            }
+            button.btn-user-basket{
+                grid-column: -6;
+            }
+            button.btn-user-language{
+                grid-column: -4;
+            }
+
+        }
+
+        
+
+        main{
+
+        }
+
+        footer{
+
+        }
+
+    }
+}

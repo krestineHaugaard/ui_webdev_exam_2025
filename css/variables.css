@@ -1,0 +1,67 @@
+:root[data-theme="winter"]{
+    --darkCol: #251E1C;
+    --lightCol: #E2DBD3;
+    --accentColOne: #C49C91;
+    --accentColTwo: #95BEE5;
+    --accentColThree: #B096CC;
+}
+
+:root[data-theme="spring"]{
+    --darkCol: #251E1C;
+    --lightCol: #E2DBD3;
+    --accentColOne: #DE8966;
+    --accentColTwo: #D476AF;
+    --accentColThree: #A9A94D;
+}
+
+:root[data-theme="summer"]{
+    --darkCol: #251E1C;
+    --lightCol: #E2DBD3;
+    --accentColOne: #E8A64B;
+    --accentColTwo: #8EC4B9;
+    --accentColThree: #F07098;
+}
+
+:root[data-theme="fall"]{
+    --darkCol: #251E1C;
+    --lightCol: #E2DBD3;
+    --accentColOne: #A9A94D;
+    --accentColTwo: #FF8C00;
+    --accentColThree: #E6C88B;
+}
+
+:root{
+    --gradient-45-light-to-accent-one: linear-gradient(45deg, var(--lightCol) 0%, var(--accentColOne) 100%); 
+    --gradient-45-light-to-accent-two: linear-gradient(45deg, var(--lightCol) 0%, var(--accentColTwo) 100%); 
+    --gradient-45-light-to-accent-three: linear-gradient(45deg, var(--lightCol) 0%, var(--accentColThree) 100%); 
+
+    --gradient-45-accent-one-to-accent-two: linear-gradient(45deg, var(--accentColOne) 0%, var(--accentColTwo) 100%); 
+    --gradient-45-accent-two-to-accent-three: linear-gradient(45deg, var(--accentColTwo) 0%, var(--accentColThree) 100%);
+    --gradient-45-accent-three-to-accent-one: linear-gradient(45deg, var(--accentColThree) 0%, var(--accentColOne) 100%);
+
+    --gradient-135-light-to-accent-one: linear-gradient(135deg, var(--lightCol) 0%, var(--accentColOne) 100%); 
+    --gradient-135-light-to-accent-two: linear-gradient(135deg, var(--lightCol) 0%, var(--accentColTwo) 100%); 
+    --gradient-135-light-to-accent-three: linear-gradient(135deg, var(--lightCol) 0%, var(--accentColThree) 100%); 
+
+    --gradient-135-accent-one-to-accent-two: linear-gradient(135deg, var(--accentColOne) 0%, var(--accentColTwo) 100%); 
+    --gradient-135-accent-two-to-accent-three: linear-gradient(135deg, var(--accentColTwo) 0%, var(--accentColThree) 100%);
+    --gradient-135-accent-three-to-accent-one: linear-gradient(135deg, var(--accentColThree) 0%, var(--accentColOne) 100%);
+
+    --gradient-225-light-to-accent-one: linear-gradient(225deg, var(--lightCol) 0%, var(--accentColOne) 100%); 
+    --gradient-225-light-to-accent-two: linear-gradient(225deg, var(--lightCol) 0%, var(--accentColTwo) 100%); 
+    --gradient-225-light-to-accent-three: linear-gradient(225deg, var(--lightCol) 0%, var(--accentColThree) 100%); 
+
+    --gradient-225-accent-one-to-accent-two: linear-gradient(225deg, var(--accentColOne) 0%, var(--accentColTwo) 100%); 
+    --gradient-225-accent-two-to-accent-three: linear-gradient(225deg, var(--accentColTwo) 0%, var(--accentColThree) 100%);
+    --gradient-225-accent-three-to-accent-one: linear-gradient(225deg, var(--accentColThree) 0%, var(--accentColOne) 100%);
+
+    --gradient-315-light-to-accent-one: linear-gradient(315deg, var(--lightCol) 0%, var(--accentColOne) 100%); 
+    --gradient-315-light-to-accent-two: linear-gradient(315deg, var(--lightCol) 0%, var(--accentColTwo) 100%); 
+    --gradient-315-light-to-accent-three: linear-gradient(315deg, var(--lightCol) 0%, var(--accentColThree) 100%); 
+
+    --gradient-315-accent-one-to-accent-two: linear-gradient(315deg, var(--accentColOne) 0%, var(--accentColTwo) 100%); 
+    --gradient-315-accent-two-to-accent-three: linear-gradient(315deg, var(--accentColTwo) 0%, var(--accentColThree) 100%);
+    --gradient-315-accent-three-to-accent-one: linear-gradient(315deg, var(--accentColThree) 0%, var(--accentColOne) 100%);
+}
+
+ 
