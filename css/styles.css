@@ -15,7 +15,7 @@ body {
         display: grid;
         grid-template-columns: var(--grid-small);
 
-        img{
+        a{
             grid-column: 2;
             padding-block: 0.5rem;
         }
@@ -62,7 +62,6 @@ body {
                 margin-block: 0.2rem;
             }
         }
-
     }
 
 
@@ -75,6 +74,69 @@ body {
     footer{
         display: grid;
         grid-template-columns: var(--grid-small);
+        gap: 0.5rem;
+        padding-inline: 0.5rem;
+
+        .social-media{
+            grid-column: 1/-1;
+            grid-row: 1;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            justify-content: center;
+            border-bottom: 2px solid var(--accentColTwo);
+            padding: 0.5rem;
+
+            svg{
+                width: 8%;
+                height: auto;
+            }
+        }
+
+        section{
+            p, svg{
+                cursor: pointer;
+            }
+        }
+
+        .question-section{
+            grid-column: 1/5;
+            grid-row: 2;
+            place-self: start center;
+
+            p{
+                 font-size: var(--size--1);
+            }
+        }
+
+        .about-section{
+            grid-column: 5/9;
+            grid-row: 2;
+            place-self: start center;
+
+            p{
+                 font-size: var(--size--1);
+            }
+        }
+
+        .policies-section{
+            grid-column: -1/-5;
+            grid-row: 2;
+            place-self: start center;
+            
+            p{
+                 font-size: var(--size--1);
+            }
+        }
+
+        > p{
+            grid-column: 1/-1;
+            grid-row: 3;
+            text-align: center;
+            font-size: var(--size--1);
+            border-top: 2px solid var(--accentColTwo);
+            padding: 0.5rem;
+        }
 
     }
 
@@ -84,52 +146,29 @@ body {
     body {
 
         > header{
-            display: grid;
-            grid-template-columns: var(--grid-small);
-
-            img{
-                grid-column: 2;
-            }
 
             button{
 
                 img{
                     width: 50%;
                     height: auto;
-                    place-self: center;
                 }
             }
-
-            button.btn-category-woman{
-                grid-column: 1/7;
-                grid-row: 2;
-            }
-            button.btn-category-men{
-                grid-column: 7/-1;
-                grid-row: 2;
-            }
-            button.btn-user-profile{
-                grid-column: -6;
-            }
-            button.btn-user-basket{
-                grid-column: -5;
-            }
-            button.btn-user-language{
-                grid-column: -3;
-            }
-
-        }
-
-        main{
-            display: grid;
-            grid-template-columns: var(--grid-small);
-
         }
 
         footer{
-            display: grid;
-            grid-template-columns: var(--grid-small);
+            gap: 1rem;
+            padding-inline: 1rem;
 
+            .social-media{
+                gap: 1rem;
+                padding: 1rem;
+
+                svg{
+                    width: 5%;
+                    height: auto;
+                }
+            }
         }
     }
 }
@@ -138,20 +177,10 @@ body {
     body {
 
         > header{
-            display: grid;
             grid-template-columns: var(--grid-big);
 
-            img{
+            a{
                 grid-column: 3;
-            }
-
-            button{
-
-                img{
-                    width: 50%;
-                    height: auto;
-                    place-self: center;
-                }
             }
 
             button.btn-category-woman{
@@ -174,15 +203,21 @@ body {
 
         }
 
-         main{
-            display: grid;
+        main{
             grid-template-columns: var(--grid-big);
-
         }
 
-        footer{
-            display: grid;
-            grid-template-columns: var(--grid-big);
+       footer{
+
+            .social-media{
+                gap: 2rem;
+
+                svg{
+                    
+                    width: 2%;
+                    height: auto;
+                }
+            }
 
         }
     }
