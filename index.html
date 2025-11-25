@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="javascript/seasons_change.js"></script>
+    <script type="module" src="javascript/category_drop_down.js"></script>
+    <script type="module" src="javascript/user_icon.js"></script>
+    <script type="module" src="javascript/basket.js"></script>
+    <script type="module" src="javascript/language_change.js"></script>
     <link rel="stylesheet" href="css/home.css">
     <title>Home | Unika Designs</title>
 </head>
 <body >
     <header>
-        <a aria-label="Unika designs logo" href="index.html"><img aria-hidden="true" src="assets/Group 5.svg" alt="Unika Designs logo"></a>
-        <button class="btn-category-woman">Women</button>
-        <button class="btn-category-men">Men</button>
-        <button class="btn-user-profile"><img src="assets/user-profile-03.svg" alt="User profile"></button>
-        <button class="btn-user-basket"><img src="assets/bag-01.svg" alt="User basket"></button>
-        <button class="btn-user-language"><img src="assets/globe-03.svg" alt="User language"></button>  
+        <a id="logo-link" aria-label="Unika designs logo" href="index.html"><img aria-hidden="true" src="assets/Group 5.svg" alt="Unika Designs logo"></a>
+        <a id="btn-category-woman" href="">Women</a>
+        <a id="btn-category-men" href="">Men</a>
+        <a id="log-in-btn" href="">Log in</a>
+        <a id="sign-up-btn" href="">Sign up</a>
+        <button id="btn-user-basket"><img src="assets/bag-01.svg" alt="User basket"></button>
+        <button id="btn-user-language"><img src="assets/globe-03.svg" alt="User language"></button>  
         <section>
             <p>Right now get 15% off on your first order !! use code: MYFIRSTORDER</p>
         </section>
+        
     </header>
     <main>
         <header>
@@ -59,5 +65,11 @@
         </section>
         <p>&copy; Unika Design - Krestine Haugaard Nielsen 2025</p>
     </footer>
+        <dialog id="basket-icon-drop-down">
+        </dialog>
+        <dialog id="change-language-icon-drop-down">
+            <p>We are curently working on translating Unika Designs</p>
+            <p>Soon you can browse your faborite designs in your prefered language</p>
+        </dialog>
 </body>
 </html>
