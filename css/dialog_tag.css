@@ -1,19 +1,32 @@
-dialog{
-   
+/* dialog{
     padding: 3rem 1rem;
-
-}
-
-dialog#basket-icon-drop-down{
-
-}
-
-dialog#change-language-model{
-
     display: flex;
     flex-direction: column;
     background: var(--lightCol);
     align-items: center;
+}
+
+dialog#basket-model{
+    
+
+    div{
+        display: flex;
+
+        button#close-basket-model{
+            background: var(--accentColOne);
+            padding: 1rem 2rem;
+            margin-top: 1.5rem;
+        }
+
+        button#check-out-btn{
+            background: var(--accentColTwo);
+            padding: 1rem 2rem;
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+dialog#change-language-model{
 
     p{
         text-align: center;
@@ -21,7 +34,7 @@ dialog#change-language-model{
         max-width: 40ch;
     }
 
-    button#close-model{
+    button#close-language-model{
         background: var(--accentColOne);
         padding: 1rem 2rem;
         margin-top: 1.5rem;
@@ -42,4 +55,4 @@ dialog#change-language-model{
 @media (min-width: 1000px){
 
 
-}
+} */
