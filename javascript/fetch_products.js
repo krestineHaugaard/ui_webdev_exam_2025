@@ -4,8 +4,6 @@ import { ALL_PRODUCTS_API_URL } from "./fakestoreapi.js";
 const params = new URLSearchParams(window.location.search);
 const category = params.get('category');
 
-console.log(category);
-
 if (category === 'men') {
     document.getElementById('products_title').innerHTML = "Men's Clothing";
 } else if (category === 'women') {
@@ -41,6 +39,7 @@ const allProducts = () => {
 
 const productCard = (product) => {
     const cardTemplate = document.querySelector("#product_card").content.cloneNode(true);
+    cardTemplate.querySelector("a").setAttribute("href", `single_product.html?title=${product.title}`)
     cardTemplate.querySelector("img").setAttribute("src", `${product.image}`);
     cardTemplate.querySelector("img").setAttribute("alt", `${product.title}`);
     cardTemplate.querySelector("h2").innerText = product.title;
