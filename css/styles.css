@@ -57,6 +57,12 @@ body {
             text-align: center;
             text-decoration: none;
         }
+        #log-out-btn{
+            grid-column: -8/-6;
+            align-content: center;
+            text-align: center;
+            text-decoration: none;
+        }
         #sign-up-btn{
             grid-column: -6/-4;
             align-content: center;
