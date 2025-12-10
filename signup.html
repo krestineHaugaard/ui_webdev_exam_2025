@@ -6,14 +6,15 @@
     <script type="module" src="javascript/seasons_change.js"></script>
     <script type="module" src="javascript/basket.js"></script>
     <script type="module" src="javascript/language_change.js"></script>
-    <link rel="stylesheet" href="css/home.css">
+    <script type="module" src="javascript/sign_up.js"></script>
+    <link rel="stylesheet" href="css/sign_up.css">
     <title>Sign up | Unika Designs</title>
 </head>
 <body >
     <header>
         <a id="logo-link" aria-label="Unika designs logo" href="index.html"><img aria-hidden="true" src="assets/Group 5.svg" alt="Unika Designs logo"></a>
-        <a id="btn-category-woman" href="products.html">Women</a>
-        <a id="btn-category-men" href="products.html">Men</a>
+        <a id="btn-category-woman" href="products.html?category=women">Women</a>
+        <a id="btn-category-men" href="products.html?category=men">Men</a>
         <a id="log-in-btn" href="login.html">Log in</a>
         <a id="sign-up-btn" href="signup.html">Sign up</a>
         <button id="btn-user-basket"><img src="assets/bag-01.svg" alt="User basket"></button>
@@ -21,10 +22,29 @@
         <section>
             <p>Right now get 15% off on your first order !! use code: MYFIRSTORDER</p>
         </section>
-        
     </header>
     <main>
-        
+        <header>
+            <h1>Sign up</h1>
+        </header>
+        <form id="formSignup">
+            <div>
+                <label for="txtEmail">E-mail</label>
+                <input type="email" id="txtEmail" required>
+            </div>
+            <div>
+                <label for="txtPassword">Password</label>
+                <input type="password" id="txtPassword" required>
+            </div>
+             <div>
+                <label for="txtRepeatPassword">Repeat password</label>
+                <input type="password" id="txtRepeatPassword" required>
+            </div>
+            <div>
+                <button type="submit">Log in</button>
+            </div>
+        </form>
+        <p>Already have an account? log in <a href="login.html">here!</a></p>
     </main>
     <footer>
         <section class="social-media">

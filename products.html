@@ -7,14 +7,14 @@
     <script type="module" src="javascript/basket.js"></script>
     <script type="module" src="javascript/language_change.js"></script>
     <script type="module" src="javascript/fetch_products.js"></script>
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/product_overview.css">
     <title>Products | Unika Designs</title>
 </head>
 <body >
     <header>
         <a id="logo-link" aria-label="Unika designs logo" href="index.html"><img aria-hidden="true" src="assets/Group 5.svg" alt="Unika Designs logo"></a>
-        <a id="btn-category-woman" href="products.html">Women</a>
-        <a id="btn-category-men" href="products.html">Men</a>
+        <a id="btn-category-woman" href="products.html?category=women">Women</a>
+        <a id="btn-category-men" href="products.html?category=men">Men</a>
         <a id="log-in-btn" href="login.html">Log in</a>
         <a id="sign-up-btn" href="signup.html">Sign up</a>
         <button id="btn-user-basket"><img src="assets/bag-01.svg" alt="User basket"></button>
@@ -22,10 +22,11 @@
         <section>
             <p>Right now get 15% off on your first order !! use code: MYFIRSTORDER</p>
         </section>
-        
     </header>
     <main>
-        <h1 id="products_title">Loading products...</h1>
+        <header>
+            <h1 id="products_title">Loading products...</h1>
+        </header>
         <section id="products_list">
 
         </section>
@@ -83,8 +84,10 @@
             <a href="">
                 <article>
                     <img src="" alt="">
-                    <h2></h2>
-                    <h3></h3>
+                    <header>
+                        <h2></h2>
+                        <h3></h3>
+                    </header>
                     <p><span class="product_rating"></span> / 5</p>
                 </article>  
             </a>  

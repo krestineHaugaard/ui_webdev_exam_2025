@@ -6,14 +6,14 @@
     <script type="module" src="javascript/seasons_change.js"></script>
     <script type="module" src="javascript/basket.js"></script>
     <script type="module" src="javascript/language_change.js"></script>
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/log_in.css">
     <title>Log in | Unika Designs</title>
 </head>
 <body >
     <header>
         <a id="logo-link" aria-label="Unika designs logo" href="index.html"><img aria-hidden="true" src="assets/Group 5.svg" alt="Unika Designs logo"></a>
-        <a id="btn-category-woman" href="products.html">Women</a>
-        <a id="btn-category-men" href="products.html">Men</a>
+        <a id="btn-category-woman" href="products.html?category=women">Women</a>
+        <a id="btn-category-men" href="products.html?category=men">Men</a>
         <a id="log-in-btn" href="login.html">Log in</a>
         <a id="sign-up-btn" href="signup.html">Sign up</a>
         <button id="btn-user-basket"><img src="assets/bag-01.svg" alt="User basket"></button>
@@ -21,10 +21,25 @@
         <section>
             <p>Right now get 15% off on your first order !! use code: MYFIRSTORDER</p>
         </section>
-        
     </header>
     <main>
-        
+        <header>
+            <h1>Log in</h1>
+        </header>
+        <form id="form-log-in">
+            <div>
+                <label for="txt-email">E-mail</label>
+                <input type="email" id="txt-email" required>
+            </div>
+            <div>
+                <label for="txt-password">Password</label>
+                <input type="password" id="txt-password" required>
+            </div>
+            <div>
+                <button type="submit">Log in</button>
+            </div>
+        </form>
+        <p>Don't have an account? sign up <a href="signup.html">here!</a></p>
     </main>
     <footer>
         <section class="social-media">
