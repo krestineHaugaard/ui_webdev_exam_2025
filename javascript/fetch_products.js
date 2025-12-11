@@ -43,7 +43,7 @@ const productCard = (product) => {
     cardTemplate.querySelector("img").setAttribute("src", `${product.image}`);
     cardTemplate.querySelector("img").setAttribute("alt", `${product.title}`);
     cardTemplate.querySelector("h2").innerText = product.title;
-    cardTemplate.querySelector("h3").innerText = product.price;
+    cardTemplate.querySelector(".product-prize").innerText = product.price;
     cardTemplate.querySelector(".product_rating").innerText = product.rating.rate;
     return cardTemplate;
 };
