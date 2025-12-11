@@ -41,7 +41,7 @@ main{
                 p{
                     text-align: start;
                     font-size: var(--size--1);
-                    margin-block: 0.2rem;
+                    margin-block: 0;
                 }
 
                 .valid:before {
@@ -68,7 +68,7 @@ main{
         }
     }
 
-    p#errorMessage{
+    p#system-message{
         grid-column: 1/-1;
         grid-row: 3;
         text-align: center;

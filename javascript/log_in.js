@@ -9,23 +9,23 @@ document.querySelector("#formLogin").addEventListener("submit", (e) => {
     .then(data => {
         const userEmail = e.target.txtEmail.value.trim();
         const userPassword = e.target.txtPassword.value.trim();
+        const systemMessage = document.querySelector("#system-message")
 
-        let found = false;
         data.forEach(user => {
-            console.log(user)
-            if (!found) {
-                if (user.email === userEmail && user.password === userPassword) {
-                    sessionStorage.setItem(SESSION_STORAGE_USER_EMAIL, userEmail);
-                    location.href = "index.html";
+            
+            if (user.email === userEmail && user.password === userPassword) {
+                sessionStorage.setItem(SESSION_STORAGE_USER_EMAIL, userEmail);
+                systemMessage.innerText = "Loggin in...";
+                location.href = "index.html";
 
-                    found = true;
-                }
-            }
+            } else if (user.email === userEmail && user.password !== userPassword){
+                systemMessage.innerText = "Incorrect password";
+                    
+            } else {
+                systemMessage.innerText = "User does not exist";
+
+            } 
         });
-
-        if (!found) {
-            // make some validation for invalid information
-        }
     })
     .catch(error => console.log(error));
 });

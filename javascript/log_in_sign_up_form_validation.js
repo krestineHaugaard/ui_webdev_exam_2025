@@ -11,14 +11,6 @@ const specialChar = document.getElementById("special-char");
 const lengthMin = document.getElementById("length-min");
 const lengthMax = document.getElementById("length-max");
 
-myInput.onfocus = function() {
-  document.getElementById("message").classList.remove("hidden");
-}
-
-myInput.onblur = function() {
-  document.getElementById("message").classList.add("hidden");
-}
-
 
 myInput.onkeyup = function() {
   // Validate lowercase letters
