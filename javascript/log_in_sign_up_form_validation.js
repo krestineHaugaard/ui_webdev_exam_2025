@@ -43,7 +43,7 @@ myInput.onkeyup = function() {
     number.classList.add("invalid");
   }
 
-  // Validate numbers
+  // Validate special characters 
   const spChar = /[!@#$%^&*(),.?-_]/g;
   if(myInput.value.match(spChar)) {
     specialChar.classList.remove("invalid");
