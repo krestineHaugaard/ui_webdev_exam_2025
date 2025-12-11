@@ -1,0 +1,106 @@
+@import "styles.css";
+
+main{
+    margin-block: 3rem;
+
+    header{
+        grid-column: 1/-1;
+        grid-row: 1;
+
+        h1{
+            text-align: center;
+            font-size: var(--size-1);
+            margin: 2rem;    
+        }
+    }
+
+    form{
+        grid-column: 3/-3;
+        grid-row: 2;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            input{
+                border: thin solid var(--darkCol);
+                margin-bottom: 1rem;
+            }
+
+            #message{
+
+                margin-bottom: 1rem;
+                margin-top: -1rem;
+
+                h2{
+                   font-size: var(--size--1);
+                   margin-block: 0.2rem;
+                }
+
+                p{
+                    text-align: start;
+                    font-size: var(--size--1);
+                    margin-block: 0.2rem;
+                }
+
+                .valid:before {
+                    position: relative;
+                    left: -0.5rem;
+                    content: "✓";
+                    color: var(--validCol);
+                }
+
+                .invalid:before {
+                    position: relative;
+                    left: -0.5rem;
+                    content: "x";
+                    color: var(--errorCol);
+                }
+            }
+
+            button{
+                place-self: center;
+                margin: 1rem;
+                padding: 1rem 4rem;
+                background: var(--gradient-135-accent-two-to-accent-three);
+            }
+        }
+    }
+
+    p#errorMessage{
+        grid-column: 1/-1;
+        grid-row: 3;
+        text-align: center;
+        margin: 0.5rem;
+        color: var(--errorCol);
+    }
+
+    
+    p{
+        grid-column: 1/-1;
+        grid-row: 4;
+        text-align: center;
+        margin: 0.5rem;
+    }
+}
+
+@media (min-width: 600px){
+   
+    main{
+
+        form{
+            grid-column: 4/-4;
+        }
+    }
+}
+
+@media (min-width: 1000px){
+    
+    main{
+        
+        form{
+            grid-column: 10/-10;
+        }
+    }
+}

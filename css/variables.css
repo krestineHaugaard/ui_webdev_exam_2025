@@ -6,6 +6,8 @@
     --accentColOne: #A9A94D;
     --accentColTwo: #8EC4B9;
     --accentColThree: #D476AF;
+    --errorCol: crimson;
+    --validCol: green;
 }
 
 :root[data-theme="winter"]{
@@ -14,6 +16,8 @@
     --accentColOne: #C49C91;
     --accentColTwo: #95BEE5;
     --accentColThree: #B096CC;
+    --errorCol: crimson;
+    --validCol: green;
 }
 
 :root[data-theme="spring"]{
@@ -22,6 +26,8 @@
     --accentColOne: #DE8966;
     --accentColTwo: #D476AF;
     --accentColThree: #A9A94D;
+    --errorCol: crimson;
+    --validCol: green;
 }
 
 :root[data-theme="summer"]{
@@ -30,6 +36,8 @@
     --accentColOne: #E8A64B;
     --accentColTwo: #8EC4B9;
     --accentColThree: #F07098;
+    --errorCol: crimson;
+    --validCol: green;
 }
 
 :root[data-theme="fall"]{
@@ -38,6 +46,8 @@
     --accentColOne: #A9A94D;
     --accentColTwo: #FF8C00;
     --accentColThree: #E6C88B;
+    --errorCol: crimson;
+    --validCol: green;
 }
 
 :root{

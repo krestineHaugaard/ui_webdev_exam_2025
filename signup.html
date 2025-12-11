@@ -9,7 +9,8 @@
     <script type="module" src="javascript/sign_up.js"></script>
     <script type="module" src="javascript/login_check.js"></script>
     <script type="module" src="javascript/log_out.js"></script>
-    <link rel="stylesheet" href="css/sign_up.css">
+    <script type="module" src="javascript/log_in_sign_up_form_validation.js"></script>
+    <link rel="stylesheet" href="css/log_in_sign_out_form.css">
     <title>Sign up | Unika Designs</title>
 </head>
 <body >
@@ -38,15 +39,26 @@
             <div>
                 <label for="txtPassword">Password</label>
                 <input type="password" id="txtPassword" required>
+                <div id="message">
+                    <h2>Password must contain the following:</h2>
+                    <p id="letter" class="invalid">A lowercase letter</p>
+                    <p id="capital" class="invalid">A uppercase letter</p>
+                    <p id="number" class="invalid">A number</p>
+                    <p id="special-char" class="invalid">A special character</p>
+                    <p id="length-min" class="invalid">Minimum 8 characters</p>
+                    <p id="length-max" class="invalid">Maximum 20 characters</p>
+                </div>
             </div>
              <div>
                 <label for="txtRepeatPassword">Repeat password</label>
                 <input type="password" id="txtRepeatPassword" required>
             </div>
             <div>
-                <button type="submit">Log in</button>
+                <button type="submit">Sign up</button>
             </div>
         </form>
+        <p id="errorMessage">Hej emd dig der sket en fejl</p>
+        
         <p>Already have an account? log in <a href="login.html">here!</a></p>
     </main>
     <footer>
