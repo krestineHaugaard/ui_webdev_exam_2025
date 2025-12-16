@@ -9,7 +9,7 @@
     <script type="module" src="javascript/fetch_single_product.js"></script>
     <script type="module" src="javascript/login_check.js"></script>
     <script type="module" src="javascript/log_out.js"></script>
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/product_single_view.css">
     <title>Single product | Unika Designs</title>
 </head>
 <body >
@@ -26,6 +26,8 @@
             <p>Right now get 15% off on your first order !! use code: MYFIRSTORDER</p>
         </section>
     </header>
+    <nav id="single-view-nav">
+    </nav>
     <main>
         <section id="show_product">
             
@@ -80,7 +82,20 @@
                 </svg>
             </button>
         </dialog> -->
-        <template id="item_template">
+        <template id="nav-template">
+            <a href="" class="back-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+            </a>
+            <p>
+                <a href="" class="category-link-back">
+                    <span class="category-title-nav"></span>
+                </a> / 
+                <span class="product-title-nav"></span>
+            </p>
+        </template>
+        <template id="item-template">
             <article>
                 <img src="" alt="">
             </article>

@@ -1,1 +1,7 @@
 @import "styles.css";
+
+
+
+p::first-letter{
+    text-transform: capitalize;
+}

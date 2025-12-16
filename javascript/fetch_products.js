@@ -29,7 +29,6 @@ const allProducts = () => {
         const productsList = document.querySelector("#products_list");
 
         filtered.forEach((product) => {
-            console.log(product)
             productsList.append(productCard(product));
         });
         
@@ -39,7 +38,7 @@ const allProducts = () => {
 
 const productCard = (product) => {
     const cardTemplate = document.querySelector("#product_card").content.cloneNode(true);
-    cardTemplate.querySelector("a").setAttribute("href", `single_product.html?title=${product.title}`)
+    cardTemplate.querySelector("a").setAttribute("href", `single_product.html?category=${category}&title=${product.title}`)
     cardTemplate.querySelector("img").setAttribute("src", `${product.image}`);
     cardTemplate.querySelector("img").setAttribute("alt", `${product.title}`);
     cardTemplate.querySelector("h2").innerText = product.title;
