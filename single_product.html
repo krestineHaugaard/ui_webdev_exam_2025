@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="javascript/seasons_change.js"></script>
     <script type="module" src="javascript/basket.js"></script>
+    <script type="module" src="javascript/add_to_basket.js"></script>
     <script type="module" src="javascript/language_change.js"></script>
     <script type="module" src="javascript/fetch_single_product.js"></script>
     <script type="module" src="javascript/login_check.js"></script>
@@ -28,10 +29,20 @@
     </header>
     <nav id="single-view-nav">
     </nav>
-    <main>
-        <section id="show_product">
-            
-        </section>
+    <main id="show_product">
+        <form id="product-size-form">
+            <select name="productSize" id="txtProductSize">
+                <option value="">-- Choose size --</option>
+                <option value="xs">XS</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+                <option value="xxl">XXL</option>
+            </select>
+            <button type="submit">Add to cart</button>
+        </form>
+        <p id="system-message"></p>
     </main>
     <footer>
         <section class="social-media">
@@ -96,9 +107,18 @@
             </p>
         </template>
         <template id="item-template">
-            <article>
-                <img src="" alt="">
-            </article>
+            <img src="" alt="">
+            <section>
+                <header>
+                    <h1></h1>
+                    <h2>&dollar;<span class="product-price"></span></h2>
+                </header>
+                <details>
+                    <summary>Product information</summary>
+                    <span class="product-description"></span>
+                </details>
+                <p class="product-rating"><span class="rating"></span> / 5 (<span class="rating-count"></span> Reviews)</p>
+            </section>
         </template>
 </body>
 </html>

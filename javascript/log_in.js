@@ -14,8 +14,8 @@ document.querySelector("#formLogin").addEventListener("submit", (e) => {
         data.forEach(user => {
             
             if (user.email === userEmail && user.password === userPassword) {
-                sessionStorage.setItem(SESSION_STORAGE_USER_EMAIL, userEmail);
                 systemMessage.innerText = "Loggin in...";
+                sessionStorage.setItem(SESSION_STORAGE_USER_EMAIL, userEmail);
                 location.href = "index.html";
 
             } else if (user.email === userEmail && user.password !== userPassword){
