@@ -6,7 +6,6 @@ const params = new URLSearchParams(window.location.search);
 const productTitle = params.get('title');
 
 const currentUser = {
-    user_email: userEmail,
     products: []
 };
 
@@ -29,7 +28,7 @@ function addProduct(productTitle, productsSize){
     const user = loadUser();
 
     const newProduct = {
-        produc_name: productTitle,
+        product_name: productTitle,
         product_size:  productsSize
     };
 
