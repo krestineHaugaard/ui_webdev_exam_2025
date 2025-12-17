@@ -10,7 +10,7 @@ const currentUser = {
 };
 
 function saveUser(user){
-    localStorage.setItem(`${userEmail}`, JSON.stringify(user));  
+    localStorage.setItem(`${userEmail}`, JSON.stringify(user)); 
 }
 
 function loadUser(){

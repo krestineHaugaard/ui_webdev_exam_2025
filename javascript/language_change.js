@@ -11,3 +11,6 @@ closeModelBtn.addEventListener("click", (e) => {
     e.preventDefault();
     languageModel.close();
 });
+
+// I have abesolutely no idea why this model does not work, but the basket works 
+// It is build the same, but does not work the same, ery strange
