@@ -7,7 +7,8 @@
     <script type="module" src="javascript/basket.js"></script>
     <script type="module" src="javascript/login_check.js"></script>
     <script type="module" src="javascript/log_out.js"></script>
-    <link rel="stylesheet" href="css/home.css">
+    <script type="module" src="javascript/check_out.js"></script>
+    <link rel="stylesheet" href="css/check_out.css">
     <title>Check out | Unika Designs</title>
 </head>
 <body >
@@ -24,8 +25,127 @@
             <p>Right now get 15% off on your first order !! use code: MYFIRSTORDER</p>
         </section>
     </header>
+    <nav>
+        <p id="shipping-nav-btn" class="done">Shipping</p>
+        <p id="payment-nav-btn" class="selected">Payment</p>
+        <p id="confirm-nav-btn">Order confirmed</p>
+    </nav>
     <main>
-        
+        <section id="shipping-address-section">
+            <header>
+                <h2>Shipping Address</h2>
+            </header>
+            <form id="shipping-address-form">
+                <div>
+                    <label for="txtFirstName">First name</label>
+                    <input type="text" id="txtFirstName" required>
+                </div>
+                <div>
+                    <label for="txtLastName">Last name</label>
+                    <input type="text" id="txtLastName" required>
+                </div>
+                <div>
+                    <label for="txtEmail">E-mail</label>
+                    <input type="email" id="txtEmail" required>
+                </div>
+                <div>
+                    <label for="txtFirstAddressLine">First address line</label>
+                    <input type="text" id="txtFirstAddressLine" required>
+                </div>
+                <div>
+                    <label for="txtSecondAddressLine">Second address line</label>
+                    <input type="text" id="txtSecondAddressLine">
+                </div>
+                <div>
+                    <label for="txtPostZip">Post zip</label>
+                    <input type="text" id="txtPostZip" required>
+                </div>
+                <div>
+                    <label for="txtCity">City</label>
+                    <input type="text" id="txtCity" required>
+                </div>
+                <div>
+                    <label for="txtDiscountCode">Got a discount code?</label>
+                    <input type="text" id="txtDiscountCode">
+                </div>
+                <div>
+                    <label for="txtNewsletter">Whant to recive our newsletter</label>
+                    <input type="checkbox" id="txtNewsletter">
+                </div>
+                <div>
+                    <label for="txtTermsAndConditions">I accept this stores purchase policies</label>
+                    <input type="checkbox" id="txtTermsAndConditions" required>
+                </div>
+                <div id="form-buttons">
+                    <a href="index.html" class="back-btn">Back</a>
+                    <button type="submit" class="submit-btn">Next</button>
+                </div>
+            </form>
+        </section>
+        <section id="payment-method-section" >
+            <header>
+                <h2>Payment method</h2>
+            </header>
+            <form id="payment-method-form">
+                <fieldset>
+                    <legend>Choose card for payment</legend>
+                    <div>
+                        <label for="txtVisa">Visa</label>
+                        <input type="radio" id="txtVisa" name="payment-card" value="visa">
+                    </div>
+                    <div>
+                        <label for="txtMasterCard">Mastercard</label>
+                        <input type="radio" id="txtMasterCard" name="payment-card" value="mastercard">
+                    </div>
+                </fieldset>
+                <div>
+                    <label for="txtCardNumber">Card number</label>
+                    <input type="text" id="txtCardNumber" pattern="[0-9]{10}" required>
+                </div>
+                <div>
+                    <label for="txtExspirationDate">Cards experation day</label>
+                    <input type="date" id="txtExspirationDate" required>
+                </div>
+                <div>
+                    <label for="txtCVC">CVC</label>
+                    <input type="text" id="txtCVC" pattern="[0-9]{3}" required>
+                </div>
+                <div id="form-buttons">
+                    <button type="button" class="back-btn" id="back-to-shipping-btn">Back</button>
+                    <button type="submit" class="submit-btn">Next</button>
+                </div>
+            </form>
+        </section>
+        <section id="purchase-confirmed-section" class="hidden">
+            <header>
+                <h2>Purchase confirmed</h2>
+            </header>
+        </section>
+        <aside id="purchase-overview">
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+            <p>For messure</p>
+        </aside>
     </main>
     <footer>
         <section class="social-media">

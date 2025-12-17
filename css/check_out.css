@@ -1,0 +1,137 @@
+@import "styles.css";
+
+nav{
+    display: flex;
+    margin: 0.5rem;
+
+    p.selected{
+        text-decoration: underline;
+    }
+
+    p.done{
+        opacity: 0.85;
+    }
+
+    p:not(:last-of-type):after {
+        content: " / ";
+    }
+}
+
+main{
+
+    section{
+        grid-column: 2 / -2;
+    
+
+        header{
+            h2{
+                margin-block: 1rem;
+                font-size: var(--size-1);
+            }
+        }
+
+        form{
+            margin-block: 1rem;
+
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                label{
+
+                }
+
+                input{
+                    border: thin solid var(--darkCol);
+                    margin-bottom: 1rem;
+                }
+
+                select{
+
+                    option{
+
+                    }
+                }
+
+            }
+
+            div#form-buttons{
+                flex-direction: row;
+
+                a{
+
+                }
+
+                button{
+
+                }
+            }
+        }
+    }
+
+
+    #purchase-overview{
+        grid-column: 1 / -1;
+        background: var(--gradient-315-light-to-accent-one);
+    }
+}
+
+
+@media (min-width: 600px){
+    nav{
+
+    }
+
+    main{
+
+        section{
+            grid-column: 1 / 8;
+        }
+
+        #shipping-address-section{
+
+        }
+
+        #payment-method-section{
+
+        }
+
+        #purchase-confirmed-section{
+
+        }
+
+        #purchase-overview{
+            grid-column: 8 / -1;
+        }
+    }
+}
+
+@media (min-width: 1000px){
+    nav{
+
+    }
+
+    main{
+
+        section{
+            grid-column: 1 / 16;
+        }
+
+        #shipping-address-section{
+
+        }
+
+        #payment-method-section{
+
+        }
+
+        #purchase-confirmed-section{
+
+        }
+
+        #purchase-overview{
+            grid-column: 16 / -1;
+        }
+    }
+}
