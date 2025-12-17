@@ -50,6 +50,7 @@ document.querySelector("#product-size-form").addEventListener("submit", (e) => {
             return false;
         }else{
             addProduct(productTitle, productSize);
+            document.querySelector("#system-message").innerText = "Item has been added to your basket";
         }
     }
 }) 
