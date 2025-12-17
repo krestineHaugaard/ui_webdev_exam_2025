@@ -16,14 +16,22 @@ document.querySelector("#formLogin").addEventListener("submit", (e) => {
             if (user.email === userEmail && user.password === userPassword) {
                 systemMessage.innerText = "Loggin in...";
                 sessionStorage.setItem(SESSION_STORAGE_USER_EMAIL, userEmail);
+                setTimeout(() => {
+                    systemMessage.remove();
+                }, 5000);
                 location.href = "index.html";
 
             } else if (user.email === userEmail && user.password !== userPassword){
                 systemMessage.innerText = "Incorrect password";
+                setTimeout(() => {
+                    systemMessage.remove();
+                }, 5000);
                     
             } else {
                 systemMessage.innerText = "User does not exist";
-
+                setTimeout(() => {
+                    systemMessage.remove();
+                }, 5000);
             } 
         });
     })

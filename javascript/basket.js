@@ -26,6 +26,7 @@ if(userEmail !== null){
 
                     filtered.forEach((item) => {
                         productList.append(productCard(item))
+    
                     });
                     
                 })
@@ -37,19 +38,42 @@ if(userEmail !== null){
             const cardTemplate = document.querySelector("#basket_icon_card").content.cloneNode(true);
             cardTemplate.querySelector("img").setAttribute("src", `${item.image}`);
             cardTemplate.querySelector("img").setAttribute("alt", `${item.title}`);
+            cardTemplate.querySelector(".product-title").innerText = item.title;
+            cardTemplate.querySelector(".product-prize").innerText = item.price;
+            cardTemplate.querySelector(".delete-item").addEventListener("click", function (){
+                const userBasket = localStorage.getItem(`${userEmail}`);
+                if (userBasket){
+                    const data = JSON.parse(userBasket);
+                    const updatedProducts = data.products.filter(product => 
+                        product.product_name !== item.title
+                    );
+
+                    localStorage.setItem(`${userEmail}`, JSON.stringify({
+                        ...data,
+                        products: updatedProducts
+                        
+                    }));
+
+                    const productList = document.querySelector("#basket-icon-items");
+                    const p = document.createElement("p");
+                    p.innerText = "And item has been removed"
+                    productList.append(p);
+
+                    setTimeout(() => {
+                        p.remove();
+                    }, 3000);
+
+                    this.closest("article").remove();
+                }
+            });
             return cardTemplate;
         };
 
         allProducts();
 
-    }else{
-        const productList = document.querySelector("#in_user_basket");
-        const p = document.createElement("p");
-        p.innerText = "You don't have any items in your basket... yet ;)"
-        productList.append(p);
-    };
+    }
 }else{
-    const productList = document.querySelector("#in_user_basket");
+    const productList = document.querySelector("#basket-icon-items");
     const p = document.createElement("p");
     p.innerText = "You need to log in to see your basket"
     productList.append(p);

@@ -43,14 +43,26 @@ document.querySelector("#product-size-form").addEventListener("submit", (e) => {
     const productSize = e.target.txtProductSize.value;
 
     if(userEmail === null){
-        document.querySelector("#system-message").innerText = "You must be logged in to add items to your basket";
+        const systemMessage = document.querySelector("#system-message");
+        systemMessage.innerText = "You must be logged in to add items to your basket";
+        setTimeout(() => {
+            systemMessage.remove();
+        }, 5000);
     }else{
         if(productSize === ""){
-            document.querySelector("#system-message").innerText = "You must choose a size";
+            const systemMessage = document.querySelector("#system-message");
+            systemMessage.innerText = "You must choose a size";
+            setTimeout(() => {
+                systemMessage.remove();
+            }, 5000);
             return false;
         }else{
             addProduct(productTitle, productSize);
-            document.querySelector("#system-message").innerText = "Item has been added to your basket";
+            const systemMessage = document.querySelector("#system-message")
+            systemMessage.innerText = "Item has been added to your basket";
+            setTimeout(() => {
+                systemMessage.remove();
+            }, 5000);
         }
     }
 }) 

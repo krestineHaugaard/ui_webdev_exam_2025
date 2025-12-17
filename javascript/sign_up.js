@@ -16,6 +16,9 @@ document.querySelector("#formSignup").addEventListener("submit", (e) => {
         data.forEach(user => {    
             if (user.email === userEmail ) {
                 systemMessage.innerText = "The e-mail is already in use, by another user";
+                setTimeout(() => {
+                    systemMessage.remove();
+                }, 5000);
                 return false;
             } 
         })
@@ -24,6 +27,9 @@ document.querySelector("#formSignup").addEventListener("submit", (e) => {
     
     if(userPassword !== userRepeatPassword){
         systemMessage.innerText = "Your password and repeated password does not match";
+        setTimeout(() => {
+            systemMessage.remove();
+        }, 5000);
         return false;
     }
 
