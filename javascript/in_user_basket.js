@@ -25,7 +25,6 @@ if(userEmail !== null){
                     const productList = document.querySelector("#in_user_basket");
 
                     filtered.forEach((item) => {
-                        console.log(item)
                         productList.append(productCard(item))
                     });
                     
