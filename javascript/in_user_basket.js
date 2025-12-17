@@ -47,5 +47,7 @@ if(userEmail !== null){
     allProducts();
 }else{
     const productList = document.querySelector("#in_user_basket");
-    productList.append(document.createElement("p").innerText = "You don't have any items in your basket... yet ;)");
+    const p = document.createElement("p");
+    p.innerText = "You don't have any items in your basket... yet ;)"
+    productList.append(p);
 }

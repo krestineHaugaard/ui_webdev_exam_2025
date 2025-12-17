@@ -58,6 +58,82 @@ main{
             grid-row: 2;
         }
     }
+
+    #in_user_basket{
+        grid-column: 1 / -1 ;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-block: 1rem;
+        
+        header{
+            grid-column: 1 / -1 ;
+            text-align: center;
+
+            h3{
+                font-size: var(--size-1);
+            }
+        } 
+
+        p{
+            grid-column: 4 / -4 ;
+            text-align: center;
+            margin-block: 1rem;
+            font-size: var(--size--1);
+        }
+
+        a{
+            text-decoration: none;
+            place-self: center center;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+
+            article{
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+
+                max-width: 150px;
+
+                img{
+                    width: auto;
+                    max-height: 150px;
+                    place-self: center;
+                }
+
+                header{
+
+                    display: inherit;
+                    flex-direction: inherit;
+                    gap: inherit;
+
+                    h4{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-size: var(--size--1);
+
+                    }
+
+                    h5{
+                        font-size: var(--size-1);
+
+                        span{
+                            font-size: inherit;
+                        }
+                    }
+                }
+
+                p{
+                    font-size: var(--size--1);
+                    margin-block: 0;
+
+                    span{
+                        font-size: inherit;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 600px){
@@ -75,6 +151,19 @@ main{
             h2{
                 margin-block: 1rem;
                 font-size: var(--size-5);
+            }
+        }
+
+        #in_user_basket{
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-block: 4rem 7rem; 
+
+            p{
+                margin-block: 2rem;
+            }
+
+            a{
+                margin-top: 1rem;
             }
         }
 
@@ -101,5 +190,18 @@ main{
                 font-size: var(--size-7);
             }
         }
+
+         #in_user_basket{
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+            a{
+                text-decoration: none;
+                place-self: center center;
+                padding: 0.5rem;
+                margin-top: 2rem;
+
+            }
+        }
+
     }
 }
