@@ -135,3 +135,9 @@ paymentForm.addEventListener("submit", (e) => {
     localStorage.removeItem(`${userEmail}`);
 
 });
+
+const orderID = document.querySelector("#order-id");
+
+const calcOrder = Math.random().toString(36).substr(2, 9);
+
+orderID.innerText = `# ${calcOrder}`;

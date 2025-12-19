@@ -61,15 +61,15 @@
                     <label for="txtCity">City</label>
                     <input type="text" id="txtCity" required>
                 </div>
-                <div>
-                    <label for="txtNewsletter">Whant to recive our newsletter</label>
+                <div class="flex-row">
                     <input type="checkbox" id="txtNewsletter">
+                    <label for="txtNewsletter">I want to recive newsletters</label>
                 </div>
-                <div>
-                    <label for="txtTermsAndConditions">I accept this stores purchase policies</label>
+                <div class="flex-row">
                     <input type="checkbox" id="txtTermsAndConditions" required>
+                    <label for="txtTermsAndConditions">I accept this stores purchase policies</label>
                 </div>
-                <div id="form-buttons">
+                <div class="flex-row form-buttons">
                     <a href="index.html" class="back-btn">Back</a>
                     <button type="submit" class="submit-btn">Next</button>
                 </div>
@@ -82,13 +82,15 @@
             <form id="payment-method-form">
                 <fieldset>
                     <legend>Choose card for payment</legend>
-                    <div>
-                        <label for="txtVisa">Visa</label>
-                        <input type="radio" id="txtVisa" name="payment-card" value="visa">
-                    </div>
-                    <div>
-                        <label for="txtMasterCard">Mastercard</label>
-                        <input type="radio" id="txtMasterCard" name="payment-card" value="mastercard">
+                    <div class="flex-row card-choice">
+                        <div class="flex-row">
+                            <label for="txtVisa">Visa</label>
+                            <input type="radio" id="txtVisa" name="payment-card" value="visa" required>
+                        </div>
+                        <div class="flex-row">
+                            <label for="txtMasterCard">Mastercard</label>
+                            <input type="radio" id="txtMasterCard" name="payment-card" value="mastercard" required>
+                        </div>
                     </div>
                 </fieldset>
                 <div>
@@ -103,7 +105,7 @@
                     <label for="txtCVC">CVC</label>
                     <input type="text" id="txtCVC" pattern="[0-9]{3}" required>
                 </div>
-                <div id="form-buttons">
+                <div class="flex-row form-buttons">
                     <button type="button" class="back-btn" id="back-to-shipping-btn">Back</button>
                     <button type="submit" class="submit-btn">Next</button>
                 </div>
@@ -111,13 +113,20 @@
         </section>
         <section id="purchase-confirmed-section" class="hidden">
             <header>
-                <h2>Purchase confirmed</h2>
+                <h2>Order placed</h2>
             </header>
+            <P>Your order has been placed and is now in our system, an e-mail will be sent to you shortly with final confirmation and an expected arrival</P>
+            <p>If you you do not get en e-mail confirmation please contact our service with this order ID</p>
+            <p id="order-id"></p>
+            <p>We hope you have had a pleasent shopping expirience here at Unika Designs</p>
+            <div class="back-to-home">
+                <a href="index.html" class="back-btn">Back to home</a>
+            </div>
         </section>
         <aside id="purchase-overview">
             <header>
                 <h2>
-                    Your purchase
+                    Your basket
                 </h2>
             </header>
             <section id="items-for-purchase">
